@@ -9,7 +9,7 @@ int main(){
    ofstream school("subjects.txt", ios::app);
    
     if (!school.is_open()){
-        cout << "ERROR FILE CAN'T OPEN" << endl;
+        cout << "UNEXPECTED ERROR HAS OCCURED:" << endl;
         return 1;
     }
     else 
