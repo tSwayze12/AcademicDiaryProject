@@ -66,6 +66,40 @@ using namespace std;
             sumOf += marks_[i] * coeffs_[i]; 
         } 
 
-        average = sumOf / coeffSum; 
-        return average; 
+        return sumOf / coeffSum; 
     }
+
+   float Subject :: evaluateAverageOnMark (int addMark, float coefficient)
+   {
+        double coeffSum{};
+        double sumOf{};
+        double average{};
+
+        for(int i = 0; i < marks_.size(); i++)
+        {
+            coeffSum += coeffs_[i];
+            sumOf += marks_[i] * coeffs_[i]; 
+        } 
+
+        coeffSum += coefficient; 
+        sumOf += addMark * coefficient; 
+
+        return sumOf/coeffSum;
+   } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
