@@ -54,70 +54,118 @@ int main() {
         }
         school_in.close();
       }break;
-    }
-       case 3:{
-              cout << "Choose which subject you want move" << endl;
-          int subject;
-       cout << "Add 1 - Algebra" << endl;
-       cout << "Add 1 - Algebra" << endl;
-       cout << "Add 2 - Biology" << endl;
-       cout << "Add 3 - Geography" << endl;
-       cout << "Add 4 - Geometry" << endl;
-       cout << "Add 5 - Foreign Language" << endl;
-       cout << "Add 6 - Computer Science" << endl;
-       cout << "Add 7 - History" << endl;
-       cout << "Add 8 - Literature" << endl;
-       cout << "Add 9 - Mathematics" << endl;
-       cout << "Add 10 - Social Studies" << endl;
-       cout << "Add 11 - Russian Language" << endl;
-       cout << "Add 12 - Technology (Labor)" << endl;
-       cout << "Add 13 - Physics" << endl;
-       cout << "Add 14 - Physical Education" << endl;
-       cout << "Add 15 - Chemistry" << endl;
-       cout << "Add 16 - Class Teacher Conversations" << endl;
-       
-            cin >> subject;
-        cout << "Add 1 - PutMark" << endl;
-        cout << "Add 2 - getAverage" << endl;
-        cout << "Add 3 -  evaluateAverageOnMark" << endl;
-        cout << "Add 0 - get back" << endl;
-            switch (subject) {
+  }
+   case 3: {
+    int choice;
+    do {
+        cout << "Choose which subject you want to move:" << endl;
+        cout << "1 - Algebra" << endl;
+        cout << "2 - Biology" << endl;
+        cout << "3 - Geography" << endl;
+        cout << "4 - Geometry" << endl;
+        cout << "5 - Foreign Language" << endl;
+        cout << "6 - Computer Science" << endl;
+        cout << "7 - History" << endl;
+        cout << "8 - Literature" << endl;
+        cout << "9 - Mathematics" << endl;
+        cout << "10 - Social Studies" << endl;
+        cout << "11 - Russian Language" << endl;
+        cout << "12 - Technology (Labor)" << endl;
+        cout << "13 - Physics" << endl;
+        cout << "14 - Physical Education" << endl;
+        cout << "15 - Chemistry" << endl;
+        cout << "16 - Class Teacher Conversations" << endl;
+        cout << "0 - Back to main menu" << endl;
+
+        cin >> choice;
+
+        if (choice == 0) {
+            break;
+        }
+
+        switch (choice) {
+            case 1:
+                cout << "Algebra selected" << endl;
+                break;
+            case 2:
+                cout << "Biology selected" << endl;
+                break;
+            case 3:
+                cout << "Geography selected" << endl;
+                break;
+            case 4:
+                cout << "Geometry selected" << endl;
+                break;
+            case 5:
+                cout << "Foreign Language selected" << endl;
+                break;
+            case 6:
+                cout << "Computer Science selected" << endl;
+                break;
+            case 7:
+                cout << "History selected" << endl;
+                break;
+            case 8:
+                cout << "Literature selected" << endl;
+                break;
+            case 9:
+                cout << "Mathematics selected" << endl;
+                break;
+            case 10:
+                cout << "Social Studies selected" << endl;
+                break;
+            case 11:
+                cout << "Russian Language selected" << endl;
+                break;
+            case 12:
+                cout << "Technology (Labor) selected" << endl;
+                break;
+            case 13:
+                cout << "Physics selected" << endl;
+                break;
+            case 14:
+                cout << "Physical Education selected" << endl;
+                break;
+            case 15:
+                cout << "Chemistry selected" << endl;
+                break;
+            case 16:
+                cout << "Class Teacher Conversations selected" << endl;
+                break;
+            default:
+                cout << "Invalid choice. Please try again." << endl;
+                break;
+        }
+
+        if (choice >= 1 && choice <= 16) {
+            cout << "1 - PutMark" << endl;
+            cout << "2 - getAverage" << endl;
+            cout << "3 - evaluateAverageOnMark" << endl;
+            cout << "0 - Back to subjects menu" << endl;
+
+            int action;
+            cin >> action;
+
+            switch (action) {
                 case 1:
-        cout << "Add 0 - get back" << endl;
+                    cout << "PutMark selected" << endl;
+                    break;
                 case 2:
-        cout << "Add 0 - get back" << endl;
-                case 4:
-        cout << "Add 0 - get back" << endl;
-                case 5: 
-        cout << "Add 0 - get back" << endl;
-                case 6:
-        cout << "Add 0 - get back" << endl;
-                case 7:
-        cout << "Add 0 - get back" << endl;
-                case 8:
-        cout << "Add 0 - get back" << endl;
-                case 9:
-        cout << "Add 0 - get back" << endl;
-                case 10:
-        cout << "Add 0 - get back" << endl;
-                case 11:
-        cout << "Add 0 - get back" << endl;
-                case 12:
-        cout << "Add 0 - get back" << endl;
-                case 13:
-        cout << "Add 0 - get back" << endl;
-                case 14:
-        cout << "Add 0 - get back" << endl;
-                case 15:
-        cout << "Add 0 - get back" << endl;
-                case 16:
-        cout << "Add 0 - get back" << endl;
-
-                    
-
-
-
-
-
-
-
+                    cout << "getAverage selected" << endl;
+                    break;
+                case 3:
+                    cout << "evaluateAverageOnMark selected" << endl;
+                    break;
+                case 0:
+                    break;
+                default:
+                    cout << "Invalid action. Please try again." << endl;
+                    break;
+            }
+        }
+    } while (choice != 0);
+    break;
+}
+}
+}
+}
