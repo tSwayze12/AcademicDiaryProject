@@ -1,9 +1,8 @@
 #include "Subject.h"
-#include <iostream>
-using namespace std; 
+using namespace std;
 
-int main ()
-{
-    Subject eng("English"); 
-    cout <<     eng.evaluateAverageOnMark(5,3) << endl; 
+int main() {
+  Subject eng("English");
+  eng.readmarks();
+  eng.showmarks();
 }
