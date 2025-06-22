@@ -111,12 +111,13 @@ void Subject::readmarks() {
 }
 
 void Subject::deleteMark(int markid) {
-  marks_.erase(marks_.begin() + markid - 1);
-  coeffs_.erase(coeffs_.begin() + markid - 1);
+  marks_.erase(marks_.begin() + markid - 1, marks_.begin() + markid);
+  coeffs_.erase(coeffs_.begin() + markid - 1, coeffs_.begin() + markid);
 
-  fstream ofs;
+  ofstream ofs;
   ofs.open(subName_ + ".txt");
-  //  for (int i = 0; i < marks_.size(); i++) {
-  ofs << marks_[0] << "\n" << coeffs_[0] << "\n";
-  // }
+
+  for (int i = 0; i < coeffs_.size(); i++) {
+    ofs << marks_[i] << endl << coeffs_[i] << endl;
+  }
 }
