@@ -138,24 +138,38 @@ int main() {
         }
 
         if (choice >= 1 && choice <= 16) {
-            cout << "1 - PutMark" << endl;
+            cout << "1 - putMark" << endl;
             cout << "2 - getAverage" << endl;
             cout << "3 - evaluateAverageOnMark" << endl;
+            cout << "4 - deleteMark" << endl;
+            cout << "5 - showmarks" << endl;
+            cout << "6 - readmarks" << endl;
             cout << "0 - Back to subjects menu" << endl;
-
             int action;
             cin >> action;
 
             switch (action) {
-                case 1:
+                case 1:{
                     cout << "PutMark selected" << endl;
+                       }
                     break;
-                case 2:
+                case 2:{
                     cout << "getAverage selected" << endl;
+                       }
                     break;
-                case 3:
+                case 3:{
                     cout << "evaluateAverageOnMark selected" << endl;
+                       }
                     break;
+                case 4:{
+                    cout << "deleteMark" << endl;
+                       }
+                case 5:{
+                    cout << "5 - showmarks" << endl;
+                       }
+                case 6: {
+                    cout << "readmarks" << endl;
+                        }
                 case 0:
                     break;
                 default:
