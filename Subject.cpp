@@ -47,9 +47,9 @@ bool Subject::putMark(int mark, float coefficient) {
 }
 
 float Subject ::getAverage() const {
-  double coeffSum{};
-  double sumOf{};
-  double average{};
+  double coeffSum = 0;
+  double sumOf = 0;
+  double average = 0;
 
   for (int i = 0; i < marks_.size(); i++) {
     coeffSum += coeffs_[i];
@@ -60,9 +60,9 @@ float Subject ::getAverage() const {
 }
 
 float Subject ::evaluateAverageOnMark(int addMark, float coefficient) const {
-  double coeffSum{};
-  double sumOf{};
-  double average{};
+  double coeffSum = 0;
+  double sumOf = 0;
+  double average = 0;
 
   for (int i = 0; i < marks_.size(); i++) {
     coeffSum += coeffs_[i];
@@ -85,7 +85,7 @@ void Subject::showmarks() const {
 void Subject::readmarks() {
   ifstream ifs;
   ifs.open(subName_ + ".txt");
-  unsigned countstr{};
+  unsigned countstr = 0;
   string str;
   while (!ifs.eof()) {
     getline(ifs, str);
@@ -98,7 +98,7 @@ void Subject::readmarks() {
   ifstream readingf;
   readingf.open(subName_ + ".txt");
 
-  string strtoconvert{};
+  string strtoconvert;
   for (int i = 0; i < countstr; i++) {
     if (i % 2 == 0) {
       getline(readingf, strtoconvert);
